@@ -34,7 +34,7 @@ namespace estudo_strategy.Controllers
             return this.CreateTicket(ticketInfo);
         }
 
-        public ITicketInfo CreateTicket([FromBody] ITicketInfo ticketInfo)
+        private ITicketInfo CreateTicket([FromBody] ITicketInfo ticketInfo)
         {
             return ticketInfo.CreateTicket(ticketInfo, _ticketService);
         }
