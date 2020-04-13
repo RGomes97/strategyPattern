@@ -1,5 +1,8 @@
 ﻿using estudo_strategy.Interfaces;
 using estudo_strategy.Services;
+using estudo_strategy.Utils.Validator;
+using FluentValidation;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +33,21 @@ namespace estudo_strategy.Models
         public Guid GroupId { get; set; }
         public bool GroupActive { get; set; }
         public string GroupName { get; set; }
+        public bool Valid { get; set; }
+        public bool Invalid { get; set; }
+        public ValidationResult ValidationResult { get; set; }
+
+        public bool Validate<TModel>(TModel model, AbstractValidator<TModel> validator)
+        {
+            ValidationResult = validator.Validate(model);
+            Valid = ValidationResult.IsValid;
+            Invalid = !Valid;
+            return Valid;
+        }
 
         public ITicketInfo CreateTicket(ITicketInfo ticketInfo, TicketService ticketService)
         {
+            Validate(this, new TicketInfoValidator());
             return ticketService.CreateTicketWithoutMailNotification(ticketInfo);
         }
     }

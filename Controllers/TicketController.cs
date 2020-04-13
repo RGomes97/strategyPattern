@@ -22,7 +22,7 @@ namespace estudo_strategy.Controllers
 
         [HttpPost]
         [Route("api/ticket/withnotification")]
-        public ITicketInfo Post([FromBody] TicketWithMailNotification ticketInfo)
+        public ITicketInfo Post(TicketWithMailNotification ticketInfo)
         {
             return this.CreateTicket(ticketInfo);
         }

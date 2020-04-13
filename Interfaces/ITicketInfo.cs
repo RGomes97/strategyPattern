@@ -1,4 +1,6 @@
 ﻿using estudo_strategy.Services;
+using FluentValidation;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +31,12 @@ namespace estudo_strategy.Interfaces
         Guid GroupId { get; set; }
         bool GroupActive { get; set; }
         string GroupName { get; set; }
+        bool Valid { get; set; }
+        bool Invalid { get; set; }
+        
+        ValidationResult ValidationResult { get; set; }
+
+        bool Validate<TModel>(TModel model, AbstractValidator<TModel> validator);
 
         ITicketInfo CreateTicket(ITicketInfo ticketInfo, TicketService ticketService);
     }
