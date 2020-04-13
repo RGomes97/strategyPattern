@@ -30,8 +30,17 @@ namespace estudo_strategy
         {
             services.AddScoped<NotificationContext, NotificationContext>();
             services.AddScoped<TicketRepository, TicketRepository>();
+            services.AddScoped<TicketService, TicketService>();
             services.AddMvc(options => options.Filters.Add<NotificationFilter>())
-            .SetCompatibilityVersion(CompatibilityVersion.Version_2_0);
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +55,7 @@ namespace estudo_strategy
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
             app.UseMvc();
         }
     }

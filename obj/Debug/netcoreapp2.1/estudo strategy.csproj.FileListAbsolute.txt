@@ -1,0 +1,14 @@
+C:\Users\ragostinho\Desktop\estudo strategy\bin\Debug\netcoreapp2.1\estudo strategy.deps.json
+C:\Users\ragostinho\Desktop\estudo strategy\bin\Debug\netcoreapp2.1\estudo strategy.runtimeconfig.json
+C:\Users\ragostinho\Desktop\estudo strategy\bin\Debug\netcoreapp2.1\estudo strategy.runtimeconfig.dev.json
+C:\Users\ragostinho\Desktop\estudo strategy\bin\Debug\netcoreapp2.1\estudo strategy.dll
+C:\Users\ragostinho\Desktop\estudo strategy\bin\Debug\netcoreapp2.1\estudo strategy.pdb
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.csprojAssemblyReference.cache
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.csproj.CoreCompileInputs.cache
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.RazorAssemblyInfo.cache
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.RazorAssemblyInfo.cs
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.AssemblyInfoInputs.cache
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.AssemblyInfo.cs
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.RazorTargetAssemblyInfo.cache
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.dll
+C:\Users\ragostinho\Desktop\estudo strategy\obj\Debug\netcoreapp2.1\estudo strategy.pdb
